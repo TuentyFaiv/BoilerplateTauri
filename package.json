@@ -13,7 +13,11 @@
     "tauri:debug": "RUST_BACKTRACE=1 tauri dev"
   },
   "dependencies": {
-    "@tauri-apps/api": "^1.1.0"
+    "@tauri-apps/api": "^1.1.0",
+    "i18next": "^22.0.1",
+    "i18next-browser-languagedetector": "^6.1.8",
+    "i18next-http-backend": "^1.4.4",
+    "svelte-i18next": "^1.2.2"
   },
   "devDependencies": {
     "@sveltejs/adapter-static": "next",

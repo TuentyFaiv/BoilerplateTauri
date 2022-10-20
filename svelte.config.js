@@ -10,6 +10,12 @@ const config = {
   kit: {
     adapter: staticAdapter(),
     alias: {
+      "@i18n": "src/i18n.ts",
+      "@config": "src/common/config.ts",
+      "@utils": "src/common/utils.ts",
+      "@typing/*": "src/common/typing/*",
+      "@services": "src/common/services/index.ts",
+      "@components": "src/components/index.ts",
       "@styles": "src/styles/Globals.scss",
       "@stylespages/*": "src/styles/pages/*",
       "@stylescomponents/*": "src/styles/components/*",

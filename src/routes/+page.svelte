@@ -1,7 +1,14 @@
 <script lang="ts">
+  import { i18n } from "@i18n";
+
+  import { Header, SEO } from "@components";
 </script>
 
-<h1>Welcome to Tauri!</h1>
+<Header />
+
+<SEO title={$i18n.t("home")} />
+
+<h1>{$i18n.t("welcome")}</h1>
 
 <div class="row">
   <a href="https://vitejs.dev" target="_blank" rel="noopener noreferrer">
@@ -15,6 +22,6 @@
   </a>
 </div>
 
-<p>Click on the Tauri, Vite, and Svelte logos to learn more.</p>
+<p>{$i18n.t("title")}</p>
 
 <style src="../styles/pages/Home.scss"></style>
