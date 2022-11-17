@@ -1,0 +1,13 @@
+.button {
+  @include text(1.8rem, 700, 2.1rem, center);
+  display: block;
+  width: 100%;
+  max-width: 230px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 30px;
+  text-transform: uppercase;
+  &--gradient {
+    background: var(--gradient);
+  }
+}

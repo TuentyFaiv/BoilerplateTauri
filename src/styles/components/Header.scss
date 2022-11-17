@@ -1,0 +1,10 @@
+@import "../styles/Mixins";
+
+.header {
+  @include flex(space-between, 25px);
+  width: 100%;
+  padding: 40px;
+  &__title {
+    @include text(5rem, 700, 5.9rem, center);
+  }
+}

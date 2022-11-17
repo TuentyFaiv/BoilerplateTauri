@@ -1,0 +1,56 @@
+@import "../styles/Mixins";
+
+.lang {
+  @include flex(center, 10px);
+  @include text(1.8rem, 700, 2.1rem);
+  min-width: 80px;
+  padding: 10px;
+  position: relative;
+  text-transform: uppercase;
+  border-radius: 4px;
+  transition: all .5s ease;
+  will-change: all;
+  z-index: 0;
+  &--active {
+    border-radius: 4px 4px 0 0;
+    &::after {
+      transform: rotateX(180deg);
+    }
+  }
+  &:active {
+    transform: translateY(0);
+  }
+  &:hover {
+    background: var(--gradient);
+  }
+  &::after {
+    content: url("/icon-lang.svg");
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+    transition: transform .5s ease;
+    will-change: transform;
+  }
+  &__options {
+    position: absolute;
+    width: 100%;
+    background: var(--gradient);
+    border-radius: 0 0 4px 4px;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 0;
+  }
+  &__option {
+    display: block;
+    padding: 10px;
+    transition: all .5s ease;
+    will-change: all;
+    &:last-child {
+      border-radius: 0 0 4px 4px;
+    }
+    &:hover {
+      background: var(--neutral-three);
+    }
+  }
+}

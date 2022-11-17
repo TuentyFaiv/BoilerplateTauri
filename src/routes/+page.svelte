@@ -1,10 +1,9 @@
 <script lang="ts">
   import { i18n } from "@i18n";
+  import { auth } from "@stores";
 
-  import { Header, SEO } from "@components";
+  import { SEO } from "@components";
 </script>
-
-<Header />
 
 <SEO title={$i18n.t("home")} />
 
@@ -23,5 +22,7 @@
 </div>
 
 <p>{$i18n.t("title")}</p>
+
+<button on:click={auth.unauthenticate}>logout</button>
 
 <style src="../styles/pages/Home.scss"></style>

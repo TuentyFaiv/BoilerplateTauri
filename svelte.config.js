@@ -16,6 +16,8 @@ const config = {
       "@typing/*": "src/common/typing/*",
       "@services": "src/common/services/index.ts",
       "@components": "src/components/index.ts",
+      "@containers": "src/containers/index.ts",
+      "@stores": "src/stores/index.ts",
       "@styles": "src/styles/Globals.scss",
       "@stylespages/*": "src/styles/pages/*",
       "@stylescomponents/*": "src/styles/components/*",

@@ -1,0 +1,28 @@
+@import "../styles/Mixins";
+
+.signin {
+  @include content(425px, 2px);
+  background: var(--gradient);
+  border-radius: 10px;
+  &__subtitle {
+    @include text(1.8rem, 700, 2.1rem, center);
+    width: 100%;
+    padding: 12px;
+    text-transform: uppercase;
+  }
+  &__title {
+    @include text(5rem, 700, 5.9rem, center);
+    width: 100%;
+    padding: 40px 0;
+    text-transform: uppercase;
+  }
+  &__content {
+    width: 100%;
+    padding: 30px;
+    background-color: var(--neutral-three);
+    border-radius: 10px;
+  }
+  &__actions {
+    @include flex(space-between, 20px);
+  }
+}
