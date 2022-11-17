@@ -3,11 +3,10 @@
     "beforeDevCommand": "npm run dev",
     "beforeBuildCommand": "npm run build",
     "devPath": "http://localhost:1420",
-    "distDir": "../build",
-    "withGlobalTauri": false
+    "distDir": "../dist"
   },
   "package": {
-    "productName": "tauri",
+    "productName": "Ranking Callytek",
     "version": "0.0.0"
   },
   "tauri": {
@@ -16,7 +15,7 @@
     },
     "bundle": {
       "active": true,
-      "category": "DeveloperTool",
+      "category": "Productivity",
       "copyright": "",
       "deb": {
         "depends": []
@@ -29,7 +28,7 @@
         "icons/icon.icns",
         "icons/icon.ico"
       ],
-      "identifier": "com.tauri.dev",
+      "identifier": "com.ranking-callytek.dev",
       "longDescription": "",
       "macOS": {
         "entitlements": null,
@@ -56,10 +55,10 @@
     "windows": [
       {
         "fullscreen": false,
-        "height": 600,
+        "height": 720,
         "resizable": true,
-        "title": "tauri",
-        "width": 800
+        "title": "Ranking Callytek",
+        "width": 1280
       }
     ]
   }

@@ -1,0 +1,75 @@
+@import "../Mixins";
+
+.modal {
+  $root: &;
+  @include flex(center);
+  position: fixed;
+  padding: 30px;
+  background-color: rgba(0, 0, 0, .5);
+  inset: 0;
+  overflow: hidden;
+  &[data-small="true"] {}
+  &[data-white="true"] {}
+  &[data-center="true"] {}
+  &[data-close="true"] {}
+  &[data-hideclose="true"] {
+    #{$root}__button {
+      display: none;
+    }
+  }
+  &[data-scroll="true"] {}
+  &[data-header="true"] {}
+  &__container {
+    @include box();
+    max-width: 1080px;
+    animation: bounce-in-top 2s both;
+    // animation-name: twitch;
+    // animation-duration: 1s;
+    // animation-timing-function: ease-out;
+    // animation-delay: 0;
+    // // animation-iteration-count: infinite;
+    // animation-direction: normal;
+    // will-change: auto;
+  }
+  &__header {}
+  &__title {}
+  &__content {}
+  &__button {}
+}
+
+@keyframes bounce-in-top {
+  0% {
+    transform: translateY(-500px);
+    animation-timing-function: ease-in;
+    opacity: 0;
+  }
+  38% {
+    transform: translateY(0);
+    animation-timing-function: ease-out;
+    opacity: 1;
+  }
+  55% {
+    transform: translateY(-65px);
+    animation-timing-function: ease-in;
+  }
+  72% {
+    transform: translateY(0);
+    animation-timing-function: ease-out;
+  }
+  81% {
+    transform: translateY(-28px);
+    animation-timing-function: ease-in;
+  }
+  90% {
+    transform: translateY(0);
+    animation-timing-function: ease-out;
+  }
+  95% {
+    transform: translateY(-8px);
+    animation-timing-function: ease-in;
+  }
+  100% {
+    transform: translateY(0);
+    animation-timing-function: ease-out;
+  }
+}

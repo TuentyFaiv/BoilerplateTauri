@@ -1,34 +1,33 @@
 {
-  "name": "tauri",
+  "name": "vanilluxe-tauri",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite dev",
-    "build": "vite build",
+    "dev": "vite",
+    "build": "tsc && vite build",
     "preview": "vite preview",
-    "check": "svelte-kit sync && svelte-check --tsconfig ./jsconfig.json",
-    "check:watch": "svelte-kit sync && svelte-check --tsconfig ./jsconfig.json --watch",
-    "tauri": "tauri",
-    "tauri:debug": "RUST_BACKTRACE=1 tauri dev"
+    "tauri": " tauri",
+    "tauri:debug": "cross-env RUST_BACKTRACE=1 tauri"
   },
   "dependencies": {
-    "@tauri-apps/api": "^1.1.0",
-    "i18next": "^22.0.1",
-    "i18next-browser-languagedetector": "^6.1.8",
-    "i18next-http-backend": "^1.4.4",
-    "svelte-i18next": "^1.2.2"
+    "@fontsource/inter": "^4.5.14",
+    "@tauri-apps/api": "^1.2.0",
+    "date-fns": "^2.29.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.4.3",
+    "socket.io-client": "^4.5.3"
   },
   "devDependencies": {
-    "@sveltejs/adapter-static": "next",
-    "@sveltejs/kit": "next",
-    "@tauri-apps/cli": "^1.1.0",
-    "sass": "^1.55.0",
-    "svelte": "^3.49.0",
-    "svelte-check": "^2.7.1",
-    "svelte-preprocess": "^4.10.6",
-    "tslib": "^2.3.1",
-    "typescript": "^4.8.4",
-    "vite": "^3.1.0"
+    "@tauri-apps/cli": "^1.2.0",
+    "@types/node": "^18.11.9",
+    "@types/react": "^18.0.25",
+    "@types/react-dom": "^18.0.9",
+    "@vitejs/plugin-react": "^2.2.0",
+    "cross-env": "^7.0.3",
+    "sass": "^1.56.1",
+    "typescript": "^4.9.3",
+    "vite": "^3.2.4"
   }
 }

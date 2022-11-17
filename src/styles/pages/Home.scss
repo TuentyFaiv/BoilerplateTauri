@@ -1,24 +1,67 @@
-.row {
-  display: flex;
-  justify-content: center;
-}
+@import "../Mixins";
 
-.logo {
-  display: block;
-  width: 145px;
-  height: 145px;
-  padding: 1.5em;
-  object-fit: contain;
-  transition: 0.75s;
-  will-change: filter;
-  aspect-ratio: 1 / 1;
-  &.tauri:hover {
-    filter: drop-shadow(0 0 2em #24c8db);
+.home {
+  @include grid(100%, 20px);
+  width: 100%;
+  height: 100vh;
+  padding: 40px;
+  grid-template-rows: 20vh calc(50vh - 120px) 30vh;
+  &__top {
+    @include flex(space-between, 30px);
+    width: 100%;
   }
-  &.vite:hover {
-    filter: drop-shadow(0 0 2em #747bff);
+  &__top-box {
+    @include grid(repeat(3, 1fr), 3%);
+    width: 75%;
+    height: 100%;
   }
-  &.svelte:hover {
-    filter: drop-shadow(0 0 2em #ff3e00);
+  &__leader {
+    @include grid(1fr 1fr, 20px);
+    @include box();
+  }
+  &__leader-box {
+    @include flex(space-evenly, 20px);
+    flex-direction: column;
+  }
+  &__time {
+    @include grid(1fr 1fr, 20px);
+    width: 100%;
+  }
+  &__time-box {
+    @include flex(stretch, 20px);
+    width: 100%;
+    align-items: stretch;
+    flex-direction: column;
+  }
+  &__time-title {
+    @include flex(flex-start, 20px);
+    @include text(2rem, 300, 2.4rem);
+    color: #FFFFFF;
+    text-transform: #FFFFFF;
+  }
+  &__time-item {
+    @include flex(center, 25px);
+    @include box();
+    flex: 1;
+    flex-direction: column;
+  }
+  &__notification {
+    @include flex(center, 20px);
+    width: 100%;
+    padding: 30px;
+    flex-direction: column;
+  }
+  &__notification-name {
+    @include text(5rem, 700, 5rem);
+    color: #FFFFFF;
+  }
+  &__notification-gif {
+    display: block;
+    margin: 0 auto;
+    object-fit: contain;
+  }
+  &__notification-amount {
+    @include text(7rem, 700, 7rem);
+    color: #FFFFFF;
   }
 }

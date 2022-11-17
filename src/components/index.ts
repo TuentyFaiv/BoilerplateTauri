@@ -1,3 +1,6 @@
-export { default as Lang } from "./Lang.svelte";
-export { default as Header } from "./Header.svelte";
-export { default as SEO } from "./SEO.svelte";
+import Day from "./Day";
+import Modal from "./Modal";
+import Position from "./Position";
+import Top from "./Top";
+
+export { Day, Position, Top, Modal };

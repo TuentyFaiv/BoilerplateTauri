@@ -1,0 +1,55 @@
+@import "./Mixins";
+
+$bg: url("../assets/images/bg.webp");
+
+/* General styles */
+* {
+  box-sizing: border-box;
+  outline: 0;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  // --primary-color: ;
+  // --secondary-color: ;
+  // --accent-color: ;
+  // --success-color: ;
+  // --error-color: ;
+  // --warning-color: ;
+  --primary-font: 'Inter', sans-serif;
+  // --secondary-font: ;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: var(--primary-font);
+}
+
+body {
+  @include background-img($bg);
+  font-size: 1.6rem;
+  min-height: 100vh;
+}
+
+input,
+select,
+textarea,
+button {
+  background-color: transparent;
+  border: 0;
+}
+
+button {
+  cursor: pointer;
+  transition: all 0.1s linear;
+}
+
+button:active {
+  transform: translateY(4px);
+}
+
+#modal-root {
+  position: relative;
+  z-index: 10;
+}

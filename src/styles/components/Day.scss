@@ -1,0 +1,24 @@
+@import "../Mixins";
+
+.day {
+  @include flex(space-evenly);
+  @include text(1.7rem, 300, 2.1rem);
+  width: 20%;
+  height: 100%;
+  padding: 20px;
+  background-color: #2A303F;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  border-radius: 18px;
+  flex-direction: column;
+
+  &__number {
+    font-size: 8rem;
+    line-height: 9rem;
+  }
+
+  &__month {
+    font-size: 3.5rem;
+    line-height: 4.2rem;
+  }
+}
